@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #8a5858;
+    color: #fff;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  nav {
+    position: relative;
+  }
+  
+  .toggle-menu {
+    display: none;
+  }
+  
+  .toggle-menu-btn {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .toggle-menu-btn span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin-bottom: 5px;
+    background-color: #fff;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .toggle-menu-btn {
+      display: block;
+    }
+    .toggle-menu-btn:hover span {
+      background-color: #ccc;
+    }
+    .toggle-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #8a5858;
+      z-index: 1;
+    }
+    .toggle-menu:checked ~ .menu {
+      display: block;
+    }
+    .menu {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+      width: 100%;
+      list-style: none;
+    }
+    .menu li {
+      margin: 10px 0;
+    }
+    form {
+      margin: 20px;
+      padding: 20px;
+    }
+  
+    h2 {
+      margin-top: 20px;
+    }
+  
+    label {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    select {
+      margin-bottom: 10px;
+    }
+  
+    input[type="submit"],
+    input[type="reset"] {
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+  
+    /* Estilos para la tabla */
+    table {
+      margin: 20px;
+      font-size: 12px;
+    }
+  
+    thead {
+      display: none;
+    }
+  
+    tbody tr {
+      display: block;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+  
+    tbody td {
+      display: block;
+      text-align: right;
+      border: none;
+      position: relative;
+      padding-left: 50%;
+    }
+  
+    tbody td::before {
+      content: attr(data-label);
+      display: inline-block;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      width: 50%;
+      text-align: left;
+      padding-left: 10px;
+    }
+  }
+  
+  .menu li a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .menu li a:hover {
+    background-color: #ccc;
+    color: #8a5858;
+  }
+  
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #8a5858;
+    z-index: 1;
+  }
+  
+  .toggle-submenu {
+    display: none;
+  }
+  
+  .menu li:hover .submenu {
+    display: block;
+  }
+  
+  .submenu li {
+    margin: 10px 0;
+  }
+  
+  .languages ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  .languages li + li {
+    margin-left: 10px;
+  }
+  
+  .languages a {
+    display: inline-block;
+    padding: 5px;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+  }
+  
+  .languages a:hover {
+    background-color: #fff;
+    color: #8a5858;
+  }
+  
+  main {
+    padding: 20px;
+  }
+
+  #zona1 {
+    grid-area: zona1;
+    padding: 10px;
+  }
+  #zona2 {
+    grid-area: zona2;
+    padding: 10px;
+  }
+  #zona3 {
+    grid-area: zona3;
+    padding: 10px;
+    text-align: left;
+  }
+  #zona4 {
+    grid-area: zona4;
+    padding: 10px;
+  }
+
+  #contenido {
+    display: grid;
+    grid-template-areas:
+    'zona1 zona2'
+    'zona3 zona4';
+    text-align: center;
+  }
+  
+  footer {
+    background-color: #8a5858;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+  }
+  
+  thead {
+    background-color: #8a5858;
+    color: #fff;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tbody tr:hover {
+    background-color: #ddd;
+  }
+  
+  td:first-child {
+    font-weight: bold;
+  }
+
+  p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #8a5858;
+    margin-bottom: 20px;
+  }
+
+  form {
+    background-color: #fff;
+    border-radius: 5px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+  }
+
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  select:focus {
+    border-color: #0099cc;
+    outline: none;
+  }
+
+  input[type="submit"],
+  input[type="reset"] {
+    background-color: #0099cc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  input[type="submit"]:hover,
+  input[type="reset"]:hover {
+    background-color: #0077b3;
+  }
+
+  .required {
+    color: #f00;
+  }
+
+  .error {
+    border-color: #f00;
+  }
+
+  .error-message {
+    color: #f00;
+    margin-top: 5px;
+  }
+
+  .social-media {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .social-media label {
+    margin-right: 10px;
+  }
+
+  ul{
+    list-style: none;
+  }

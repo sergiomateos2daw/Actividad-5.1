@@ -1,0 +1,152 @@
+*    {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+  body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background-color: #8a5858;
+  color: #FFFFFF;
+  }
+
+  .logo img {
+  height: 40px;
+  }
+
+  nav {
+  position: relative;
+  }
+
+  .toggle-menu {
+  display: none;
+  }
+
+  .toggle-menu-btn {
+  display: none;
+  cursor: pointer;
+  }
+
+  .toggle-menu-btn span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin-bottom: 4px;
+  background-color: #FFFFFF;
+  }
+
+  @media screen and (max-width: 767px) {
+  .toggle-menu-btn {
+  display: block;
+  }
+  .toggle-menu-btn:hover span {
+  background-color: #CCCCCC;
+  }
+  .toggle-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #8a5858;
+  z-index: 1;
+  }
+  .toggle-menu:checked ~ .menu {
+  display: block;
+  }
+  .menu {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  width: 100%;
+  list-style: none;
+  }
+  .menu li {
+  margin: 8px 0;
+  }
+  }
+
+  .menu li a {
+  display: block;
+  padding: 8px;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 16px;
+  }
+
+  .menu li a:hover {
+  background-color: #CCCCCC;
+  color: #8a5858;
+  }
+
+  .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #8a5858;
+  z-index: 1;
+  }
+
+  .toggle-submenu {
+  display: none;
+  }
+
+  .menu li:hover .submenu {
+  display: block;
+  }
+
+  .submenu li {
+  margin: 8px 0;
+  }
+
+  .languages ul {
+  display: flex;
+  list-style: none;
+  }
+
+  .languages li + li {
+  margin-left: 10px;
+  }
+
+  .languages a {
+  display: inline-block;
+  padding: 5px;
+  color: #FFFFFF;
+  text-decoration: none;
+  border: 1px solid #FFFFFF;
+  font-size: 14px;
+  }
+
+  .languages a:hover {
+  background-color: #FFFFFF;
+  color: #8a5858;
+  }
+
+  main {
+  padding: 20px;
+  font-size: 18px;
+  }
+
+  footer {
+  background-color: #8a5858;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  }
+
+  ul {
+    list-style: none;
+    background-color: white;
+}
+
